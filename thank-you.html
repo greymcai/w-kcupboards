@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | W&K Cabinet</title>
+    <meta name="description" content="Thank you for contacting W&K Cabinet. We'll get back to you soon regarding your custom cabinetry needs.">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <!-- CSS & JS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        :root {
+            --primary: #B88A5E;
+            --primary-dark: #9A6F4A;
+            --secondary: #3A3A3A;
+            --light: #F8F5F1;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--secondary);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-gray-800">W&K <span class="text-primary">Cabinet</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html#home" class="text-gray-700 hover:text-primary px-3 py-2">Home</a>
+                        <a href="index.html#about" class="text-gray-700 hover:text-primary px-3 py-2">About</a>
+                        <a href="index.html#services" class="text-gray-700 hover:text-primary px-3 py-2">Services</a>
+                        <a href="index.html#gallery" class="text-gray-700 hover:text-primary px-3 py-2">Gallery</a>
+                        <a href="index.html#contact" class="text-gray-700 hover:text-primary px-3 py-2">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="index.html#services" class="block px-3 py-2 text-gray-700 hover:text-primary">Services</a>
+                <a href="index.html#gallery" class="block px-3 py-2 text-gray-700 hover:text-primary">Gallery</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Content -->
+    <section class="min-h-screen flex items-center justify-center bg-gray-50 pt-20 pb-12">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-feather="check-circle" class="text-green-500 w-10 h-10"></i>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Thank You!</h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Your message has been successfully submitted. We appreciate you reaching out to W&K Cabinet regarding your custom cabinetry needs.
+                </p>
+                <p class="text-gray-600 mb-8">
+                    Our team will review your inquiry and get back to you within 24-48 hours. For immediate assistance, please feel free to contact us directly via WhatsApp.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="index.html" class="btn-primary text-white px-8 py-3 rounded-md font-medium shadow-lg hover:shadow-xl">
+                        Back to Home
+                    </a>
+                    <a href="https://wa.me/27731253631" 
+                       class="inline-flex items-center bg-green-500 text-white px-8 py-3 rounded-md font-medium shadow-lg hover:bg-green-600 transition-all">
+                        <i data-feather="message-circle" class="mr-2"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">W&K Cabinet</h3>
+                    <p class="text-gray-400 mb-4">
+                        Expert custom cabinetry and woodwork solutions for homes and businesses in Port Elizabeth and surrounding areas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://m.facebook.com/W-K-Cabinet-154299279708518/" target="_blank" 
+                           class="text-gray-400 hover:text-white transition-all">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="https://wa.me/27731253631" target="_blank" 
+                           class="text-gray-400 hover:text-green-400 transition-all">
+                            <i data-feather="message-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#home" class="text-gray-400 hover:text-primary transition-all">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-primary transition-all">About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary transition-all">Services</a></li>
+                        <li><a href="index.html#gallery" class="text-gray-400 hover:text-primary transition-all">Gallery</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-primary transition-all">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary transition-all">Kitchen Cabinets</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary transition-all">Built-in Wardrobes</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary transition-all">Office Furniture</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary transition-all">Entertainment Units</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary transition-all">Custom Woodwork</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="mr-2 text-gray-400"></i>
+                            <a href="tel:+27731253631" class="text-gray-400 hover:text-primary transition-all">+27 73 125 3631</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="mr-2 text-gray-400"></i>
+                            <a href="mailto:fredmalunga@yahoo.com" class="text-gray-400 hover:text-primary transition-all">fredmalunga@yahoo.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="map-pin" class="mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">South Africa</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2023 W&K Cabinet. All rights reserved.
+                </p>
+                <p class="text-gray-400 text-sm">
+                    Developed by <a href="#" class="text-primary hover:underline">GreyMC</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/27731253631?text=I'm%20interested%20in%20your%20custom%20cabinets" 
+           class="bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition-all flex items-center justify-center">
+            <i data-feather="message-circle" class="w-6 h-6"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Feather icons
+        feather.replace();
+        
+        // Change navbar style on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
